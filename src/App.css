@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
-}
+/* ===========================M E N U============================= */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.parentMenuDiv {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: #E05433;
+}
+.compTextDiv {
+  display: flex;
+}
+.iconComp {
+  width:36px;
+  height:29px;
+  margin:13px 14px;
+  /* margin-left: 385px; */
+}
+
+.menuTitle {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: 109px;
+  margin: 13px 13px;
+  font-size: 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.loginParent {
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.arrowLoginDiv {
+  display: flex;
+  align-items: center;
 }
+
+.loginLink {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: Roboto;
+  text-decoration-line: none;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.registerIcon{
+  margin-left: 10px;
+}
+
+.borderLeftDiv {
+  text-align: center;
+  width:154px;
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+/* ===================================H O M E==================================== */
+
+/* .parentHome {
+  width: 100%;
+  height: 100%;
+  background-size: auto auto;
+  margin-top: 100px; 
+  background-image: url('./Image/showcase\ 1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+
+
+} */
