@@ -19,8 +19,8 @@ export function Menu() {
         }} />
         <CompTextDiv />
         <div className={myBool ? 'register' : 'secondRegister'}>
-          <NavLink to="/" exact className="loginLink" >Login</NavLink>
-          <NavLink to='' exact className="loginLink" >Register</NavLink>
+          <NavLink to="/login" exact className="loginLink" >Login</NavLink>
+          <NavLink to='/register' exact className="loginLink" >Register</NavLink>
           <NavLink to='' exact className="loginLink" >Browse Bootcamps</NavLink>
         </div>
       </div>
