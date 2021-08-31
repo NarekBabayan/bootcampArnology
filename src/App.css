@@ -257,7 +257,7 @@
 .exposition {
   margin-top: 12px;
   margin-left: 45px;
-  width: 393px;
+  max-width: 393px;
   height: 48px;
   font-size: 16px;
   line-height: 24px;
@@ -343,6 +343,35 @@
   text-decoration-line: none;
 }
 
+@media screen and (max-width:776px){
+  .parentLogin {
+    width: 70%;
+  }
+  .title span {
+    font-size: 30px;
+  }
+
+  .emailInput {
+    width: 70%;
+  }
+
+  .emailInput input {
+    width: 100%;
+  }
+
+  .passwordInput input {
+    width: 70%;
+  }
+  
+  .buttonLoginPage {
+    width: 70%;
+  }
+
+  .buttonLoginPage button {
+    width: 100%;
+  }
+
+}
 
 /* =============================== REGISTER PAGE ==================================== */
 
@@ -354,7 +383,7 @@
 
 .parentRegister {
   width: 540px;
-  height: 818px;
+  margin-bottom: 20px;
   margin-top: 48px;
   box-sizing: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
@@ -436,7 +465,7 @@
 
 .botomTextRegisterPage {
   width: 411px;
-  height: 48px;
+  /* height: 48px; */
   margin-left: 45px;
   margin-top: 17px;
   font-family: Roboto;
@@ -450,6 +479,7 @@
 }
 
 .registerButton button {
+  margin-bottom: 45px;
   outline: none;
   margin-left: 45px;
   margin-top: 15px;
@@ -461,4 +491,177 @@
   color: #FFFFFF;
   font-size: 14px;
   line-height: 24px;
+}
+
+@media screen and (max-width:776px) {
+  .parentRegister {
+    width: 70%;
+  }
+
+  .titleRegister span {
+    font-size: 30px;
+  } 
+
+  .checkboxRegister {
+    width:70%;
+  } 
+  
+  .botomTextRegisterPage {
+    width: 70%;
+  } 
+
+  .registerButton button {
+    width: 70%;
+  } 
+}
+
+/*==========================================RESET PASSWORD=============================  */
+
+.resetPasswordPage {
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid red; */
+}
+
+.resetPassword {
+  display: flex;
+  flex-direction: column;
+  width: 730px;
+  /* height: 318px; */
+  margin-top: 48px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  box-sizing: border-box;
+}
+
+.childReset {
+  font-size: 15px;
+  /* line-height: 24px; */
+  font-family: Roboto;
+  color:#212529;
+}
+
+.childResetPassword1{ 
+  margin-top: 29px;
+  margin-left: 45px;
+}
+
+.linkReset {
+  text-decoration-line: none;
+  font-size: 15px;
+  line-height: 24px;
+  color: #E05433;
+}
+
+.childResetPassword2 {
+  margin-left: 45px;
+  margin-top:21px;
+  font-size: 38px;
+  line-height: 48px;
+  font-family: Roboto;
+}
+
+.childResetPassword3 {
+  margin-left: 45px;
+  margin-top:11px;
+}
+
+.childResetPassword4 {
+  margin-left: 45px;
+  margin-top:16px;
+}
+
+.inputResetPassword {
+  /* margin-top: 8px; */
+  margin-left: 45px;
+  width: 640px;
+  height: 38px;
+  background: #FFFFFF;
+  border: 1px solid #CED4DA;
+  box-sizing: border-box;
+  outline: none;
+  padding-left: 13px;
+  padding: 7px 7px;
+}
+
+.buttonResetPassword {
+  margin-left: 45px;
+  margin-top: 16px;
+  margin-bottom: 45px;
+  width: 640px;
+  height: 38px; 
+  background: #343A40;
+  border: 1px solid #343A40;
+  box-sizing: border-box;
+  outline: none;
+  color: #FFFFFF;
+}
+
+@media  screen and (max-width:776px) {
+
+  .resetPassword {
+    width:70%;
+    border:1px solid red;
+  }
+
+  .childResetPassword2 {
+    font-size: 30px;
+  }
+
+  .childResetPassword3 {
+    margin-right: 10px;
+  }
+
+  .inputResetPassword {
+    width: 70%;
+  }
+
+  .buttonResetPassword {
+    width: 70%;
+  }
+}
+
+/* =================================== UPDATE PASSWORD ================================== */
+
+.updatePasswordPage {
+  display: flex;
+  justify-content: center;
+}
+
+.updatePassword {
+  display: flex;
+  flex-direction: column;
+  width: 730px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  box-sizing: border-box;
+  margin-top: 48px;
+}
+
+.titleUpdate {
+  margin-left: 45px;
+  margin-top: 26px;
+  font-size: 40px;
+  font-family: Roboto;
+  color: #212529;
+  
+}
+
+.updateP {
+  margin-left: 45px;
+  margin-top: 16px;
+  font-family: Roboto;
+  font-size: 15px;
+  color: #212529;
+}
+
+@media  screen and (max-width:776px) {
+  .updatePassword {
+    width: 70%;
+  }
+
+  .titleUpdate {
+    font-size: 30px;
+  } 
+
 }

@@ -9,7 +9,7 @@ export function Address() {
 
       <div className='textPassword'>Password</div>
 
-      <div className='passwordInput'>
+      <div className='emailInput'>
         <input placeholder='Enter Password' />
       </div>
     </>

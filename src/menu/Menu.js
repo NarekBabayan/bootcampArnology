@@ -5,7 +5,7 @@ import { CompTextDiv } from "./CompTextDiv";
 import { useState } from "react";
 
 export function Menu() {
- let [myBool, setMyBool] = useState(true);
+ let [myBool, setMyBool] = useState(false);
   return (
     <>
       <div className="parentMenuDiv">
