@@ -1,7 +1,40 @@
+import { useEffect, useState } from "react";
 import { Address } from "../login/Address";
 import { Menu } from "../menu/Menu";
 
 export function Register() {
+
+  const [myBool, setMyBool] = useState(false);
+  const [state, setState] = useState(null);
+
+
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setState({
+      ...state,
+      [name]: value
+    })
+    
+  }
+
+
+  const handleClick =async ()  =>{
+    let data=await fetch('http://devcamp-api-node.herokuapp.com/api/v1/auth/register',{
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+        
+      },
+      body: JSON.stringify(state) 
+    })
+    let result =await data.json();
+    localStorage.setItem("result",JSON.stringify(result))
+    
+
+    console.log(JSON.parse(localStorage.getItem('result')));
+  }
+
   return (
     <>
       <Menu />
@@ -22,10 +55,21 @@ export function Register() {
           <div className='textEmailAddress'>Name</div>
 
           <div className='emailInput'>
-            <input placeholder='Enter Full Name' />
+            <input placeholder='Enter Full Name' name='name' onChange={handleChange} />
           </div>
 
-          <Address />
+          {/* <Address /> */}
+          <div className='textEmailAddress'> Email Address</div>
+
+          <div className='emailInput'>
+            <input placeholder='Enter Email'  name='email' onChange={handleChange}/>
+          </div>
+
+          <div className='textPassword'>Password</div>
+
+          <div className='emailInput'>
+            <input placeholder='Enter Password' name='password'  onChange={handleChange}/>
+          </div>
 
           <div className='textEmailAddress'>Confirm Password</div>
 
@@ -36,11 +80,11 @@ export function Register() {
           <div className='checkboxRegister'>
             <span>User Role</span>
             <div className='parentCheckbox'>
-              <input type="checkbox" class="checkbox-round" />
+              <input type="checkbox" className="checkbox-round" />
               <span>Regulyar User Browse (Browse, Write reviews, etc)</span>
             </div>
             <div className='parentCheckbox2'>
-              <input type="checkbox" class="checkbox-round" />
+              <input type="checkbox" className="checkbox-round"  />
               <span>Bootcamp Publisher</span>
             </div>
           </div>
@@ -50,7 +94,7 @@ export function Register() {
           </div>
 
           <div className='registerButton'>
-            <button>Register</button>
+            <button onClick={handleClick}>Register</button>
           </div>
         </div>
       </div>

@@ -1,8 +1,20 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu } from "../menu/Menu";
 import { Address } from "./Address";
 
 export function Login() {
+
+  const [myBool, setMyBool] = useState(false);
+
+  useEffect(
+    function loginPromise() {
+      return (
+        fetch('{{URL}}/api/v1/auth/login', {
+          method: 'POST'
+        }).then((resp) => resp.json)
+      );
+    }, [myBool])
 
   return (
     <>
@@ -24,10 +36,12 @@ export function Login() {
             <span>Log in to list your Bootcamp or rate, review and favorite bootcamps</span>
           </div>
 
-          <Address/>
-          
-          <div className = 'buttonLoginPage'>
-            <button>Login</button>
+          <Address />
+
+          <div className='buttonLoginPage'>
+            <button onClick={() => {
+              setMyBool(!myBool);
+            }}>Login</button>
           </div>
 
           <div className='forgotPassword'>
