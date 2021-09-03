@@ -15,24 +15,29 @@ export function Register() {
       ...state,
       [name]: value
     })
-    
+
   }
 
 
-  const handleClick =async ()  =>{
-    let data=await fetch('http://devcamp-api-node.herokuapp.com/api/v1/auth/register',{
-      method: "POST",
-      headers: {
-        'Content-Type': 'application/json'
-        
-      },
-      body: JSON.stringify(state) 
-    })
-    let result =await data.json();
-    localStorage.setItem("result",JSON.stringify(result))
-    
+  const handleClick = async () => {
 
-    console.log(JSON.parse(localStorage.getItem('result')));
+    try {
+      let data = await fetch('http://devcamp-api-node.herokuapp.com/api/v1/auth/register', {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(state)
+      })
+      let result = await data.json();
+      localStorage.setItem("result", JSON.stringify(result))
+
+
+
+    } catch {
+
+      console.log('Duplicate field value entered');
+    }
   }
 
   return (
@@ -58,17 +63,17 @@ export function Register() {
             <input placeholder='Enter Full Name' name='name' onChange={handleChange} />
           </div>
 
-          {/* <Address /> */}
+
           <div className='textEmailAddress'> Email Address</div>
 
           <div className='emailInput'>
-            <input placeholder='Enter Email'  name='email' onChange={handleChange}/>
+            <input placeholder='Enter Email' name='email' onChange={handleChange} />
           </div>
 
           <div className='textPassword'>Password</div>
 
           <div className='emailInput'>
-            <input placeholder='Enter Password' name='password'  onChange={handleChange}/>
+            <input placeholder='Enter Password' name='password' onChange={handleChange} />
           </div>
 
           <div className='textEmailAddress'>Confirm Password</div>
@@ -84,7 +89,7 @@ export function Register() {
               <span>Regulyar User Browse (Browse, Write reviews, etc)</span>
             </div>
             <div className='parentCheckbox2'>
-              <input type="checkbox" className="checkbox-round"  />
+              <input type="checkbox" className="checkbox-round" />
               <span>Bootcamp Publisher</span>
             </div>
           </div>

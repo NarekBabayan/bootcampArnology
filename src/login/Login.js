@@ -1,20 +1,46 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { Menu } from "../menu/Menu";
 import { Address } from "./Address";
 
 export function Login() {
 
-  const [myBool, setMyBool] = useState(false);
+  const [state, setState] = useState(null);
+  let history = useHistory();
 
-  useEffect(
-    function loginPromise() {
-      return (
-        fetch('{{URL}}/api/v1/auth/login', {
-          method: 'POST'
-        }).then((resp) => resp.json)
-      );
-    }, [myBool])
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setState({
+      ...state,
+      [name]: value
+    })
+
+  }
+
+
+  const handleClick = async () => {
+
+    try {
+      let data = await fetch('http://devcamp-api-node.herokuapp.com/api/v1/auth/login', {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(state)
+      })
+      let result = await data.json();
+      localStorage.setItem("resultLogin", JSON.stringify(result))
+      if (result.success) {
+        history.push('/')
+      }else {
+        console.log('Try Again Wrong Password');
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
+
 
   return (
     <>
@@ -36,12 +62,21 @@ export function Login() {
             <span>Log in to list your Bootcamp or rate, review and favorite bootcamps</span>
           </div>
 
-          <Address />
+
+          <div className='textEmailAddress'> Email Address</div>
+
+          <div className='emailInput'>
+            <input placeholder='Enter Email' name='email' onChange={handleChange} />
+          </div>
+
+          <div className='textPassword'>Password</div>
+
+          <div className='emailInput'>
+            <input placeholder='Enter Password' name='password' onChange={handleChange} />
+          </div>
 
           <div className='buttonLoginPage'>
-            <button onClick={() => {
-              setMyBool(!myBool);
-            }}>Login</button>
+            <button onClick={handleClick}>Login</button>
           </div>
 
           <div className='forgotPassword'>

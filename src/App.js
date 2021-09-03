@@ -5,6 +5,7 @@ import { Login } from './login/Login';
 import { Register } from './register/Register';
 import { Reset } from './resetPassword/Reset';
 import { Update } from './updatePassword/Update';
+import { Major } from './major/Major';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path = "/register" exact component = {Register}/>
         <Route path = "/reset" exact component = {Reset}/>
         <Route path = "/update" exact component = {Update}/>
+        <Route path = "/major" exact component = {Major}/>
       </Switch>
     </div>
   );

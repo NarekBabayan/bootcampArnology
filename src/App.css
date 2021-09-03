@@ -124,7 +124,7 @@
     width: 100%;
     height: 880px;
     background-size: 100% 100%;
-    background-image: url('./Image/showcase 1.png');
+    background-image: url('./Image/showcase1.png');
     background-repeat: no-repeat;
     background-position: center;
 } 
@@ -664,4 +664,278 @@
     font-size: 30px;
   } 
 
+}
+
+/* ======================================================MAJOR PAGE =============================== */
+
+.majorPage {
+  display: flex;
+  justify-content: center;
+}
+
+.majorParent {
+  display: flex;
+  margin-top: 104px;
+}
+
+.filterParent {
+  display: flex;
+  flex-direction: column;
+}
+
+.location {
+  width:350px;
+  height:178px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  box-sizing: border-box;
+}
+
+.location > p {
+  margin-left: 21px;
+  color: #212529;
+  margin-top: 19px;
+  font-size: 24px;
+}
+
+.parentInputInLocation {
+  display: flex;
+  margin-left: 21px;
+}
+
+.parentInputInLocation input {
+  width: 139px;
+  height: 38px;
+  outline: none;
+  box-sizing: border-box;
+  padding-left:11px ;
+  padding: 8px 6px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+
+}
+
+.parentInputInLocation > .inp2 {
+  margin-left: 29px;
+}
+
+.location button {
+  margin-left: 21px;
+  margin-top: 16px;
+  width: 308px;
+  height: 38px;
+  outline: none;
+  background: #E05433;
+  border: 1px solid #E05433;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  font-size: 15px;
+}
+
+.filterP {
+  margin-top: 22px;
+  color: #212529;
+  font-size: 24px;
+  font-family: Roboto;
+}
+
+.filterR {
+  margin-top: 9px;
+  font-size: 15px;
+  font-family: Roboto;
+}
+
+.filterInput {
+  position: relative;
+}
+
+.filterInput > input{
+  margin-top: 8px;
+  width: 350px;
+  height: 38px;
+  background: #FFFFFF;
+  border: 1px solid #CED4DA;
+  box-sizing: border-box;
+  outline: none;
+}
+
+
+.filterParent > button {
+  margin-top: 24px;
+  width: 350px;
+  height: 38px;
+  background: #E05433;
+  border: 1px solid #E05433;
+  box-sizing: border-box;
+  font-size: 15px;
+  color:#FFFFFF;
+  outline: none;
+}
+
+.topTriangle {
+  position: absolute;
+  right: 25px;
+  top: 21px;
+}
+
+.bottomTriangle {
+  position: absolute;
+  right: 25px;
+  top:27px;
+}
+
+.websiteParent {
+  display: flex;
+  flex-direction: column;
+}
+
+.childWebsite {
+  position: relative;
+  display: flex;
+  margin-left: 29px;
+  width: 730px;
+  height: 164px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  box-sizing: border-box;
+  margin-bottom: 18px;
+}
+
+.imageWebsite {
+  width: 245px;
+  height: 163px;
+}
+
+.imageWebsite img {
+  width: 245px; 
+  height:163px;
+}
+
+.titleWebsite {
+  margin-top: 19px;
+  margin-left: 19px;
+  font-family: Roboto;
+  font-size: 20px;
+  color: #E05433;
+}
+
+.cityWebsite {
+  font-family: Roboto;
+  width: 92px;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color:  #343A40;
+  padding: 3px 3px;
+  padding-left: 5px;
+  margin-top: 18px;
+  margin-left: 19px;
+}
+
+.descriptionWebsite {
+  margin-left: 19px;
+  margin-top: 11px;
+  font-family: Roboto;
+  font-size: 16px;
+  color: #212529;
+
+}
+
+.greenBox {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 676px;
+  top: 21px;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 15px;
+  color: #FFFFFF;
+  width: 33px;
+  height: 23px;
+  background: #28A745;
+}
+
+.pageNumberParent {
+  display: flex;
+  margin-top: 17px;
+  margin-left: 29px;
+  margin-bottom: 64px;
+}
+
+.previous {
+  width: 86px;
+  height: 38px;
+  background: #FFFFFF;
+  border: 1px solid #DEE2E6;
+  box-sizing: border-box;
+  font-family: Roboto;
+  font-size: 15px;
+  color: #E05433;
+  padding: 8px 10px;
+  padding-left: 13px;
+}
+
+.numbers {
+  width: 35px;
+  height: 38px;
+  background: #FFFFFF;
+  border: 1px solid #DEE2E6;
+  box-sizing: border-box;
+  font-family: Roboto;
+  font-size: 16px;
+  color: #E05433;
+  padding: 8px 10px;
+  padding-left: 13px;
+} 
+
+.next {
+  width: 59px;
+  height: 38px;
+  background: #FFFFFF;
+  border: 1px solid #DEE2E6;
+  font-family: Roboto;
+  font-size: 16px;
+  color: #E05433;
+  padding: 8px 10px;
+  padding-left: 13px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width:1198px){
+  .majorParent {
+    flex-direction: column;
+    margin-left: 30px;
+  }
+
+  .childWebsite {
+    width: 80%;
+    margin-left: 0px;
+  }
+
+  .greenBox {
+    left: 90%;
+  }
+
+  .filterInput {
+    width: 350px;
+  } 
+
+  .marginChildWebsite {
+    margin-top: 40px;
+  }
+
+  .pageNumberParent {
+    margin-left: 0px;
+  }
+
+  
+}
+
+@media screen and (max-width:700px){
+
+  .imageWebsite img {
+    width: 200px; 
+  }
 }
